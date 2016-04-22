@@ -2,7 +2,9 @@
   background-color: $header-color;
   padding: 1em;
   position: relative;
-  height: 60px;
+  @media screen and (min-width: 48em) {
+    height: 60px;
+  }
 }
 
 .h1 {
