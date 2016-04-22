@@ -49,7 +49,21 @@ You will need the following things properly installed on your computer.
 
 ### Deploying
 
-I'm deploying it to Heroku.
+I'm deploying it to Heroku. It's extremely simple.
+
+Of course you need a [Heroku account](https://www.heroku.com/) and [toolbelt](https://toolbelt.heroku.com/), then just follow the next steps from within you application folder:
+
+```
+heroku create <OPTIONAL_APP_NAME> --buildpack https://github.com/tonycoco/heroku-buildpack-ember-cli.git
+```
+
+And now just deploy using:
+
+```
+git push heroku master
+```
+
+You can see it live at http://ember-cart.herokuapp.com :)
 
 ## Further Reading / Useful Links
 
