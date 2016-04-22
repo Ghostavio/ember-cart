@@ -12,10 +12,12 @@ const Router = Ember.Router.extend({
 
   _trackPage() {
     Ember.run.scheduleOnce('afterRender', this, () => {
+      const page = document.location.pathname;
       const title = this.getWithDefault('currentRouteName', 'unknown');
 
       Ember.get(this, 'metrics').trackPage('GoogleAnalytics', {
-        title: title
+        title: title,
+        page: page
       });
     });
   }
