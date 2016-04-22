@@ -1,12 +1,12 @@
 # Ember-cart
 
-When I received the assignment I was in doubt about either using Ember or React, and since I've been recently playing with Ember to check what has been released in the last iterations I decided to go with Ember first. After it's finished to port it to React should be possible in a few hours or so.
+When I received the assignment I was in doubt about either using Ember or React, and since I've been recently playing with Ember to check what has been released in the last iterations I decided to go with Ember first. After it's finished, port it to React should be possible in a few hours or so.
 
-So for this mockup I started solely focusing on functionality and then later worked on the design.
+So for this mockup I started solely focusing on functionality and then later worked on the design, did some really awful choice of colors and then later ended up with this pallet — thanks Yves :)
 
 This mockup is doing a request to the [API](http://beta.json-generator.com/api/json/get/4kiDK7gxZ) sent to me on the email and using `localStorage` for the cart.
 
-I started doing a list of products but then I read the email again and noticed it was asking for a "grid" of products, so I reworked the design to better fit that description. Since the API doesn't provide a name for the product, I'm just truncating the description with the first words fitting 25 characters and using it as a name, I hope this isn't a problem.
+I started doing a list of products but then I read the email again and noticed it was asking for a "grid" of products, so I reworked the design to better fit that description. Since the API doesn't provide a name for the products, I'm just truncating the description with the first words fitting 25 characters and using it as name, I hope this isn't a problem.
 
 At first I thought of doing a separated page for the cart, but soon realized a snippet approach would be more user friendly.
 
