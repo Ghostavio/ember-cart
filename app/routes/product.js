@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  tracking: Ember.inject.service(),
   model(params) {
     return this.store.peekRecord('product', params.id);
   },
