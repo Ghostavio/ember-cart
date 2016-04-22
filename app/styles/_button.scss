@@ -19,8 +19,8 @@
 
   &[disabled],
   &.fake {
-    background-color: silver;
-    border-bottom: 3px solid darken(silver, 5);
+    background-color: $silver;
+    border-bottom: 3px solid darken($silver, 5);
   }
 
   &[disabled] {
