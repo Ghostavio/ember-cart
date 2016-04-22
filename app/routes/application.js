@@ -1,11 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // tracking: Ember.inject.service(),
-  // beforeModel() {
-  //   return this.get('tracking')
-  //     .prepare('/bower_components/analytics/analytics.min.js');
-  // },
   model() {
     return Ember.RSVP.hash({
       products : this.store.findAll('product'),
