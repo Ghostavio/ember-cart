@@ -45,11 +45,6 @@
 
 .cart-link {
   font-size: 1.1rem;
-  text-shadow: 2px 2px 2px rgba(100, 100, 100, .5);
   color: $white;
   padding: 1em;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }

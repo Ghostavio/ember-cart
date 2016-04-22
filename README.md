@@ -12,7 +12,7 @@ At first I thought of doing a separated page for the cart, but soon realized a s
 
 Apart from the requirements asked on the assignment, this mockup also implements a few more features:
 * it's possible to alter the quantity of any given item in the cart, up to the limit in the stock
-* deleting items from the cart/clearing cart button
+* delete button to remove items from the cart
 * total sum of prices*quantities
 
 ### Nice improvements to make

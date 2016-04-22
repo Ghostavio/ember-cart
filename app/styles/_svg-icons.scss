@@ -1,0 +1,20 @@
+// unless it's strictly defined, icons should just inherit it's parent size
+.svg-i {
+  width: inherit;
+  height: inherit;
+  vertical-align: top;
+}
+
+.svg-middle {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.svg-normal {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.svg-white {
+  fill: $white;
+}

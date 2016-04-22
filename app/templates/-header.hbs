@@ -10,6 +10,9 @@
 <section class="subheader">
   {{#outside-click onOutsideClick=(action "hideCart")}}
     <a href="#" class="cart-link" {{action "showCart"}}>
+      <svg class="svg-i svg-normal svg-white">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/sprite.svg#i-cart"></use>
+      </svg>
       Cart ({{model.cart.length}})
     </a>
 
@@ -50,6 +53,9 @@
         <button type="button" name="checkout" disabled="{{boolean-disabled model.cart.length}}" class="btn checkout" {{action "checkout"}}>
           <span class="btn-text">
             Checkout
+            <svg class="svg-i svg-middle svg-normal svg-white">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/sprite.svg#i-check"></use>
+            </svg>
           </span>
         </button>
       </section>
