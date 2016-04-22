@@ -1,0 +1,28 @@
+<h2 class="page-title">Our Products</h2>
+
+<ul class="product-list">
+  {{#each model as |item|}}
+    <li class="product-item">
+      {{#link-to "product" item}}
+        <img src="{{item.image}}" alt="product image" class="product-image">
+      {{/link-to}}
+      {{#link-to "product" item class="product-link"}}
+        {{truncate-words item.description 25}}...
+      {{/link-to}}
+      <span class="product-price">{{item.price}}</span>
+      {{#unless item.isAdded}}
+        <button type="button" {{action "add" item}} name="add" class="btn">
+          <span class="btn-text">
+            Add to Cart
+          </span>
+        </button>
+      {{else}}
+        <span class="added-text">
+          Added to cart
+        </span>
+      {{/unless}}
+    </li>
+  {{else}}
+    <li>No more products : (</li>
+  {{/each}}
+</ul>

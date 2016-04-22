@@ -1,0 +1,29 @@
+<section class="product-page">
+  <img src="{{model.image}}" alt="product image" class="product-image">
+  <div class="details">
+    <p>
+      {{model.description}}
+    </p>
+    <p>
+      <b>Color:</b> {{model.color}}
+    </p>
+    <p>
+      <b>In Stock:</b> {{model.stock.remaining}}
+    </p>
+    <p class="product-price">
+      <b>Price:</b> {{model.price}}
+    </p>
+
+    {{#unless model.isAdded}}
+      <button type="button" {{action "add" model}} name="add" class="btn">
+        <span class="btn-text">
+          Add to Cart
+        </span>
+      </button>
+    {{else}}
+      <span class="added-text">
+        Added to cart
+      </span>
+    {{/unless}}
+  </div>
+</section>
