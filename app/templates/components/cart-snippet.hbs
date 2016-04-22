@@ -1,0 +1,20 @@
+<strong class="item-name">
+  {{truncate-words description 25}}...
+</strong>
+<span class="quantity">
+  {{input
+    name="quantity"
+    type="number"
+    class="quantity-input"
+    value=quantity
+    min=1
+    max=max
+    change=(action "update" id)
+  }}
+</span>
+<span class="product-price">
+  {{get-total price quantity}}
+</span>
+<button type="button" {{action "remove" id}} name="remove" class="cart-remove-btn">
+  Remove
+</button>

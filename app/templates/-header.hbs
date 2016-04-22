@@ -1,0 +1,54 @@
+<header class="header">
+  <h1 class="h1">
+    {{#link-to "index"}}
+      Welcome to Gus' Amazing Store!
+    {{/link-to}}
+  </h1>
+</header>
+
+<section class="subheader">
+  <a href="#" class="cart-link" {{action "showCart"}}>
+    Cart ({{model.cart.length}})
+  </a>
+  {{#if cartVisible}}
+    <section class="cart">
+      <h2 class="cart-title">Your Cart</h2>
+      {{!--
+        normaly we would loop through the cart model here, but ember's
+        localStorage adapter has some bugs regarding hasMany relationships,
+        so we loop through the products model filtering by the `isAdded` flag
+      --}}
+      <ul class="cart-list">
+        {{#each model.products as |item|}}
+          {{#if item.isAdded}}
+            {{cart-snippet
+              id=item.id
+              description=item.description
+              quantity=item.quantity
+              price=item.price
+              max=item.total
+              model=model
+            }}
+          {{/if}}
+        {{/each}}
+        {{#unless model.cart}}
+          <div class="empty-text">
+            Your cart is empty.
+          </div>
+        {{/unless}}
+      </ul>
+
+      {{#if model.cart}}
+        <div class="total">
+          Total: <span class="total-money">{{to-money total}}</span>
+        </div>
+      {{/if}}
+
+      <button type="button" name="checkout" disabled="{{boolean-disabled model.cart.length}}" class="btn checkout" {{action "checkout"}}>
+        <span class="btn-text">
+          Checkout
+        </span>
+      </button>
+    </section>
+  {{/if}}
+</section>
