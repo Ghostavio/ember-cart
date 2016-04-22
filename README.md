@@ -1,7 +1,23 @@
 # Ember-cart
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+When I received the assignment I was in doubt about either using Ember or React, and since I've been recently playing with Ember to check what has been released in the last iterations I decided to go with Ember first. After it's finished to port it to React should be possible in a few hours or so.
+
+So for this mockup I started solely focusing on functionality and then later worked on the design.
+
+This mockup is doing a request to the [API](http://beta.json-generator.com/api/json/get/4kiDK7gxZ) sent to me on the email and using `localStorage` for the cart.
+
+I started doing a list of products but then I read the email again and noticed it was asking for a "grid" of products, so I reworked the design to better fit that description. Since the API doesn't provide a name for the product, I'm just truncating the description with the first words fitting 25 characters and using it as a name, I hope this isn't a problem.
+
+At first I thought of doing a separated page for the cart, but soon realized a snippet approach would be more user friendly.
+
+Apart from the requirements asked on the assignment, this mockup also implements a few more features:
+* it's possible to alter the quantity of any given item in the cart, up to the limit in the stock
+* deleting items from the cart/clearing cart button
+* total sum of prices*quantities
+
+### Nice improvements to make
+* use [fastboot](https://www.ember-fastboot.com/) to do server side rendering
+* implement simple front-end product search
 
 ## Prerequisites
 
@@ -15,8 +31,9 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
+* `npm install ember-cli -g` if you haven't already
 * `git clone <repository-url>` this repository
-* change into the new directory
+* `cd ember-cart`
 * `npm install`
 * `bower install`
 
@@ -25,15 +42,6 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
 ### Building
 
 * `ember build` (development)
@@ -41,7 +49,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+I'm deploying it to Heroku.
 
 ## Further Reading / Useful Links
 
@@ -50,4 +58,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
