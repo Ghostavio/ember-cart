@@ -54,9 +54,9 @@ export default Ember.Route.extend({
 
           item.deleteRecord();
           item.save();
-
-          alert('You checked out successfully :)');
         });
+
+        alert('You checked out successfully :)');
       });
     },
     error(error) {
