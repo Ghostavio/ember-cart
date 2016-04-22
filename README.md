@@ -33,7 +33,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `npm install ember-cli -g` if you haven't already
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:Ghostavio/ember-cart.git` this repository
 * `cd ember-cart`
 * `npm install`
 * `bower install`

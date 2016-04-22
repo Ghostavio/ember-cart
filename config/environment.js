@@ -13,9 +13,15 @@ module.exports = function(environment) {
       }
     },
 
-    'ember-metrics': {
-      includeAdapters: ['google-analytics']
-    },
+    metricsAdapters: [
+      {
+        name: 'GoogleAnalytics',
+        environments: ['all'],
+        config: {
+          id: 'UA-52169675-4'
+        }
+      }
+    ],
 
     contentSecurityPolicy: {
       'default-src': "'none'",

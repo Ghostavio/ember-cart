@@ -4,19 +4,6 @@ import config from './config/environment';
 const Router = Ember.Router.extend({
   location: config.locationType,
   metrics: Ember.inject.service(),
-  afterModel() {
-    const metrics = Ember.get(this, 'metrics');
-
-    metrics.activateAdapters([
-      {
-        name: 'GoogleAnalytics',
-        environments: ['all'],
-        config: {
-          id: 'UA-52169675-4'
-        }
-      }
-    ]);
-  },
 
   didTransition() {
     this._super(...arguments);
@@ -25,10 +12,11 @@ const Router = Ember.Router.extend({
 
   _trackPage() {
     Ember.run.scheduleOnce('afterRender', this, () => {
-      const page = document.location.pathname;
       const title = this.getWithDefault('currentRouteName', 'unknown');
 
-      Ember.get(this, 'metrics').trackPage({ page, title });
+      Ember.get(this, 'metrics').trackPage('GoogleAnalytics', {
+        title: title
+      });
     });
   }
 });
