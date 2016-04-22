@@ -39,6 +39,7 @@
     "ember-load-initializers": "^0.5.1",
     "ember-localstorage-adapter": "1.0.0-rc.1",
     "ember-normalize": "0.0.9",
+    "ember-outside-click": "1.0.2",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.1"
   }

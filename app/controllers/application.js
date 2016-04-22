@@ -16,6 +16,9 @@ export default Ember.Controller.extend({
   actions: {
     showCart() {
       this.toggleProperty('cartVisible');
+    },
+    hideCart() {
+      this.set('cartVisible', false);
     }
   }
 });
