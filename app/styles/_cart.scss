@@ -1,0 +1,37 @@
+.cart-title {
+  font-size: 1.1rem;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.list-item {
+  border-bottom: 2px solid $light-orange;
+
+  .product-price {
+    float: none;
+    color: $text-color;
+    font-weight: 600;
+  }
+}
+
+.item-name {
+  display: block;
+  font-weight: 400;
+}
+
+.quantity-input {
+  width: 40px;
+}
+
+.total-money {
+  color: $red;
+  font-weight: 600;
+}
+
+.empty-text {
+  text-align: center;
+}

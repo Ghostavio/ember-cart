@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: $default-font;
+  font-size: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: $default-size;
+  margin: 0 0 82px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
