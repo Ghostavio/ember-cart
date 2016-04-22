@@ -41,12 +41,10 @@ export default Ember.Route.extend({
     },
     checkout() {
       // clear the cart
-      const cart = this.store.findAll('cart').then((data) => {
+      this.store.findAll('cart').then((data) => {
         data.map((item) => {
           const id = item.get('product').content.currentState[0].id;
           const product = this.store.peekRecord('product', id);
-
-          console.log(product.get('total'));
 
           product.set('isAdded', false);
           product.set('stock.remaining', product.get('total'));
