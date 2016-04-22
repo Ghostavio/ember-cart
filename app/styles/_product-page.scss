@@ -9,17 +9,6 @@
     text-align: center;
     padding-top: 2em;
   }
-
-  .product-image {
-    max-width: 400px;
-    margin: 0 auto;
-    display: block;
-
-    @media screen and (min-width: 48em) {
-      width: 45%;
-      display: inline-block;
-    }
-  }
 }
 
 .details {
@@ -41,5 +30,22 @@
     > p:first-child {
       margin-top: 0;
     }
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+
+  @media screen and (min-width: 48em) {
+    width: 45%;
+    display: inline-block;
+  }
+
+  .product-price {
+    bottom: 1em;
   }
 }

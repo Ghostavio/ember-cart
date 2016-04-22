@@ -9,6 +9,7 @@
     overflow: auto;
     max-height: 600px;
     -webkit-overflow-scrolling: touch;
+    z-index: 1;
   }
 }
 
@@ -23,7 +24,7 @@
 }
 
 .list-item {
-  border-bottom: 2px solid $light-orange;
+  border-bottom: 2px solid $light-blue;
   padding: .3em 0;
 
   @media screen and (min-width: 35.5em) and (max-width: 767px) {
