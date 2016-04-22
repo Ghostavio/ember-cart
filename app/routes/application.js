@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  tracking: Ember.inject.service(),
-  beforeModel() {
-    return this.get('tracking')
-      .prepare('/bower_components/analytics/analytics.min.js');
-  },
+  // tracking: Ember.inject.service(),
+  // beforeModel() {
+  //   return this.get('tracking')
+  //     .prepare('/bower_components/analytics/analytics.min.js');
+  // },
   model() {
     return Ember.RSVP.hash({
       products : this.store.findAll('product'),
@@ -61,11 +61,6 @@ export default Ember.Route.extend({
 
         alert('You checked out successfully :)');
       });
-    },
-    error(error) {
-      if (error) {
-        return this.transitionTo('application-error');
-      }
     }
   }
 });
