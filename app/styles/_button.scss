@@ -1,6 +1,6 @@
 .btn {
   display: block;
-  margin: 1em auto;
+  margin: .6em auto .8em;
   width: 50%;
   height: 45px;
   background-color: $green;
@@ -10,14 +10,20 @@
   border-radius: 2px;
   font-weight: 300;
   outline: none;
+  text-align: center;
+  line-height: 2.5rem;
 
   &:active {
     background-color: darken($green, 5);
   }
 
-  &[disabled] {
+  &[disabled],
+  &.fake {
     background-color: silver;
     border-bottom: 3px solid darken(silver, 5);
+  }
+
+  &[disabled] {
     text-decoration: line-through;
   }
 }

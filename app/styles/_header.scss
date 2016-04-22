@@ -1,6 +1,7 @@
 .header {
   background-color: $header-color;
   padding: 1em;
+  position: relative;;
 }
 
 .h1 {
@@ -11,10 +12,32 @@
   text-shadow: 2px 2px 1px rgba(45, 48, 154, .125);
 }
 
+.logo {
+  display: none;
+  float: left;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  @media screen and (min-width: 48em) {
+    display: block;
+  }
+}
+
 .subheader {
   background-color: $suave-blue;
   text-align: center;
   padding: 1em .5em;
+
+  @media screen and (min-width: 48em) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.2em .5em;
+    height: 60px;
+  }
 }
 
 .cart-link {

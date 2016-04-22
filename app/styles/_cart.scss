@@ -1,3 +1,17 @@
+.cart {
+  @media screen and (min-width: 48em) {
+    position: absolute;
+    background: $suave-blue;
+    top: 100%;
+    right: 0;
+    width: 350px;
+    padding: 1em;
+    overflow: auto;
+    max-height: 600px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .cart-title {
   font-size: 1.1rem;
 }
@@ -10,9 +24,13 @@
 
 .list-item {
   border-bottom: 2px solid $light-orange;
+  padding: .3em 0;
+
+  @media screen and (min-width: 35.5em) and (max-width: 767px) {
+    line-height: 2rem;
+  }
 
   .product-price {
-    float: none;
     color: $text-color;
     font-weight: 600;
   }
@@ -21,6 +39,12 @@
 .item-name {
   display: block;
   font-weight: 400;
+
+  @media screen and (min-width: 35.5em) and (max-width: 767px) {
+    display: inline-block;
+    height: 30px;
+    min-width: 220px;
+  }
 }
 
 .quantity-input {
@@ -32,6 +56,18 @@
   font-weight: 600;
 }
 
-.empty-text {
-  text-align: center;
+.remove-btn {
+  float: right;
+  border-radius: 50%;
+  background-color: $white;
+  border: 1px solid $text-color;
+  width: 28px;
+  height: 28px;
+  color: $text-color;
+  line-height: 1rem;
+  margin-top: -10px;
+
+  @media screen and (min-width: 35.5em) and (max-width: 767px) {
+    margin-top: 3px;
+  }
 }
