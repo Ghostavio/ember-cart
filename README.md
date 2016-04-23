@@ -16,9 +16,9 @@ Apart from the requirements asked on the assignment, this mockup also implements
 * total sum of prices*quantities
 
 ### Nice improvements to make
-[*] use [fastboot](https://www.ember-fastboot.com/) to do server side rendering (universal app)
-[] implement simple front-end product search
-[] implement sorting (hard because price is not coming as a number in the API, so it needs some workarounds)
+- [x] use [fastboot](https://www.ember-fastboot.com/) to do server side rendering (universal app)
+- [ ] implement simple front-end product search
+- [ ] implement sorting (hard because price is not coming as a number in the API, so it needs some workarounds)
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ I'm deploying it to Heroku. It's extremely simple.
 Of course you need a [Heroku account](https://www.heroku.com/) and [toolbelt](https://toolbelt.heroku.com/), then just follow the next steps from within you application folder:
 
 ```
-heroku create <OPTIONAL_APP_NAME> --buildpack https://github.com/tonycoco/heroku-buildpack-ember-cli.git
+heroku create <OPTIONAL_APP_NAME> --buildpack https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
 ```
 
 And now just deploy using:
