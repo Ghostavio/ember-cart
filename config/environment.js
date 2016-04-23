@@ -28,7 +28,7 @@ module.exports = function(environment) {
       'script-src': "'self' www.google-analytics.com",
       'font-src': "'self'",
       'connect-src': "'self' *",
-      'img-src': "'self' www.google-analytics.com",
+      'img-src': "'self' www.google-analytics.com i.imgur.com",
       'style-src': "'self'",
       'media-src': "'self'"
     },
