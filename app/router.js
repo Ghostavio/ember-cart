@@ -1,21 +1,28 @@
 import Ember from 'ember';
 import config from './config/environment';
+import injectService from 'ember-service/inject';
+
+const { get, run } = Ember;
 
 const Router = Ember.Router.extend({
   location: config.locationType,
-  metrics: Ember.inject.service(),
+  metrics: injectService(),
+  fastboot: injectService(),
 
   didTransition() {
     this._super(...arguments);
-    this._trackPage();
+    if (!get(this, 'fastboot.isFastBoot')) {
+      window.scrollTo(0, 0);
+      this._trackPage();
+    }
   },
 
   _trackPage() {
-    Ember.run.scheduleOnce('afterRender', this, () => {
+    run.scheduleOnce('afterRender', this, () => {
       const page = document.location.pathname;
       const title = this.getWithDefault('currentRouteName', 'unknown');
 
-      Ember.get(this, 'metrics').trackPage('GoogleAnalytics', {
+      get(this, 'metrics').trackPage('GoogleAnalytics', {
         title: title,
         page: page
       });
