@@ -1,7 +1,7 @@
 <h2 class="page-title">Our Products</h2>
 
 <ul class="product-list">
-  {{#each model as |item|}}
+  {{#each model.products as |item|}}
     <li class="product-item">
       {{#link-to "product" item}}
         <img src="{{item.image}}" alt="product image" class="product-image">
