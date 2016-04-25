@@ -14,6 +14,7 @@ Apart from the requirements asked on the assignment, this mockup also implements
 * it's possible to alter the quantity of any given item in the cart, up to the limit in the stock
 * delete button to remove items from the cart
 * total sum of prices*quantities
+* not allowing user to add item to cart if item is out of stock
 
 ### Nice improvements to make
 - [x] use [fastboot](https://www.ember-fastboot.com/) to do server side rendering (universal app)
