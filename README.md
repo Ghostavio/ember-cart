@@ -41,7 +41,7 @@ You will need the following things properly installed on your computer.
 
 * `ember server` to tun simple development server
 * `ember fastboot --serve-assets` to run fastboot server (server-side rendering)
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your app at [http://localhost:4200](http://localhost:4200) (or [http://localhost:3000](http://localhost:3000) if you choose to run the fastboot server).
 
 ### Building
 
@@ -70,6 +70,7 @@ You can see it live at http://ember-cart.herokuapp.com :)
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://ember-cli.com/)
+* [fastboot](https://www.ember-fastboot.com/)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
