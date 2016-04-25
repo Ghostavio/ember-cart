@@ -12,6 +12,9 @@ export default Model.extend({
   price       : attr('string'),
   stock       : attr(),
   product     : belongsTo('cart'),
+  sold        : belongsTo('sold'),
+  isSold      : attr('boolean', { defaultValue: false }),
+  outOfStock  : attr('boolean', { defaultValue: false }),
   isAdded     : attr('boolean', { defaultValue: false }),
   quantity    : attr('number'), //workaround for the cart loop issue
 

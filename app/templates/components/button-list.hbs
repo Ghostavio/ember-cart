@@ -1,0 +1,28 @@
+{{#if item.outOfStock}}
+  <span class="btn fake">
+    <span class="btn-text">
+      <svg class="svg-i svg-middle svg-normal svg-white">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/sprite.svg#i-ban"></use>
+      </svg>
+      Out of Stock
+    </span>
+  </span>
+{{else if item.isAdded}}
+  <span class="btn fake">
+    <span class="btn-text">
+      <svg class="svg-i svg-middle svg-normal svg-white">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/sprite.svg#i-check"></use>
+      </svg>
+      Added to cart
+    </span>
+  </span>
+{{else}}
+  <button type="button" {{action "add" item}} name="add" class="btn">
+    <span class="btn-text">
+      <svg class="svg-i svg-middle svg-normal svg-white">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/sprite.svg#i-plus"></use>
+      </svg>
+      Add to Cart
+    </span>
+  </button>
+{{/if}}
