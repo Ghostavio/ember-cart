@@ -1,9 +1,19 @@
 <h2 class="page-title">Our Products</h2>
 
+<div class="sort">
+  <span class="sort-title">Sort by:</span>
+  <select onchange={{action "sortBy" value="target.value"}}>
+    <option value='' selected>More relevant</option>
+    <option value='description'>Alphabetically</option>
+    <option value='numberPrice'>Price (from lowest to highest)</option>
+    <option value='numberPrice:desc'>Price (from highest to lowest)</option>
+  </select>
+</div>
+
 <ul class="product-list">
-  {{#each model.products as |item|}}
+  {{#each sortedProducts as |item|}}
     <li class="product-item">
-      {{#link-to "product" item}}
+      {{#link-to "product" item class="image-container"}}
         <img src="{{item.image}}" alt="product image" class="product-image">
       {{/link-to}}
       {{#link-to "product" item class="product-link"}}

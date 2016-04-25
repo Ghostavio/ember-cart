@@ -17,8 +17,8 @@ Apart from the requirements asked on the assignment, this mockup also implements
 
 ### Nice improvements to make
 - [x] use [fastboot](https://www.ember-fastboot.com/) to do server side rendering (universal app)
+- [x] implement sorting
 - [ ] implement simple front-end product search
-- [ ] implement sorting (hard because price is not coming as a number in the API, so it needs some workarounds)
 
 ## Prerequisites
 

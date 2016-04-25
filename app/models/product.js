@@ -11,13 +11,15 @@ export default Model.extend({
   image       : attr('string'),
   price       : attr('string'),
   stock       : attr(),
-  total       : computed(function() {
-    return this.get('stock.remaining');
-  }),
-  numberPrice : computed(function() {
-    return Number(this.get('price').substr(1).replace(',', ''));
-  }),
   product     : belongsTo('cart'),
   isAdded     : attr('boolean', { defaultValue: false }),
-  quantity    : attr('number') //workaround for the cart loop issue
+  quantity    : attr('number'), //workaround for the cart loop issue
+
+  total: computed(function() {
+    return this.get('stock.remaining');
+  }),
+
+  numberPrice: computed(function() {
+    return Number(this.get('price').substr(1).replace(',', ''));
+  })
 });

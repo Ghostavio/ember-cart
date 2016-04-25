@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   cartVisible: false,
   prices: computed('model.products.@each.quantity', function() {
     const arr = [];
-    this.get('model').products.map((item) => {
+    this.get('model.products').map((item) => {
       if (item.get('isAdded')) {
         arr.pushObject(item.get('numberPrice') * item.get('quantity'));
       }
