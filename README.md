@@ -52,7 +52,7 @@ You will need the following things properly installed on your computer.
 
 I'm deploying it to Heroku. It's extremely simple.
 
-Of course you need a [Heroku account](https://www.heroku.com/) and [toolbelt](https://toolbelt.heroku.com/), then just follow the next steps from within you application folder:
+Of course you need a [Heroku account](https://www.heroku.com/) and [toolbelt](https://toolbelt.heroku.com/), then just follow the next steps from within your application folder:
 
 ```
 heroku create <OPTIONAL_APP_NAME> --buildpack https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
