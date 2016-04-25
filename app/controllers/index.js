@@ -3,7 +3,7 @@ import Ember from 'ember';
 const { computed } = Ember;
 
 export default Ember.Controller.extend({
-  sortProps: [''],
+  sortProps: ['id'],
   sortedProducts: computed.sort('model.products', 'sortProps'),
   actions: {
     sortBy(val) {
