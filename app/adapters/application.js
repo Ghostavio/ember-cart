@@ -5,6 +5,6 @@ export default RESTAdapter.extend({
   // the end of the url, so we did a little workaround with buildURL :)
   // host: 'http://beta.json-generator.com/api/json/get/4kiDK7gxZ',
   buildURL: () => {
-    return 'http://beta.json-generator.com/api/json/get/4kiDK7gxZ';
+    return 'https://next.json-generator.com/api/json/get/4kiDK7gxZ';
   }
 });
